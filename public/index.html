@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette Pro</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0d1117;
+      --bg-secondary: #161b22;
+      --bg-card: #1c2128;
+      --accent-color: #58a6ff;
+      --font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-family);
+      background-color: var(--bg-primary);
+      color: white;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header, footer {
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .palette-card {
+      background-color: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .palette-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+    }
+
+    input, button {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      font-family: var(--font-family);
+      transition: all 0.3s ease;
+    }
+
+    input {
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+    }
+
+    button {
+      background-color: var(--accent-color);
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darken(var(--accent-color), 10%);
+    }
+
+    .loading, .empty-state {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Color Palette Pro</h1>
+  </header>
+  <main id="palette-container"></main>
+  <footer>
+    <p>&copy; 2023 Color Palette Pro. All rights reserved.</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
